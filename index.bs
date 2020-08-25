@@ -4087,12 +4087,17 @@ Registry Reports</h4>
 <h4 id=reg-ref-specifications>
 Registry Referencing Specifications</h4>
 
-All rules and statements about implementations of Registries must be contained in the specifications or other documents that reference
-the registry, and are therefore subject to the processes (including approval and intellectual property provisions) applicable to those
-referencing specifications.
+	All rules and statements about implementations of Registries must be contained in the specifications or other documents that reference
+	the registry, and are therefore subject to the processes (including approval and intellectual property provisions) applicable to those
+	referencing specifications.
 
-It must not be possible that a change to the Registry values affect the conformance of implementations to the Referencing document; 
-if there are values that must be implemented, or any other such restrictions, they must be documented in the document without reference to the registry.
+	It must not be possible that a change to the Registry values affect the conformance of implementations to the Referencing document; 
+	if there are values that must be implemented, or any other such restrictions, they must be documented in the document without reference to the registry.
+
+	For example, "All implementations must implement the Basic-Method as defined in the Registry" is not acceptable; 
+	a change to the definition of the Basic-Method in the Registry would then affect conformance. Instead, the requirement must be complete in the
+	specification, for example "All implementations must recognize the name Basic-Method, and implement it as defined by IETF RFC xxxx".
+	(The Registry should nonetheless contain Basic-Method as an entry.)
 
 <h4 id=reg-table-update>
 Updating Registry Tables</h4>
