@@ -3976,6 +3976,12 @@ Registries</h3>
 	This section of the W3C Process provides a specialized process
 	facilitating the publication and maintenance of such [=registry tables=],
 	particularly those required by or closely related to [=W3C Recommendations=].
+	
+	Note that not every table in a specification is a potential registry. 
+	If the intent or effect is that the table enumerates all the possibilities 
+	the authors of the specification expect or envisage, then the table by itself is enough. 
+	Similarly if the table is managed by the working group and only updated as part of specification update, 
+	then the complexities of 3rd-party registration applications and rules are not needed.
 
 <h4 id=reg-rules>
 Registry Definition</h4>
@@ -4016,8 +4022,14 @@ Registry Definition</h4>
 			The [=custodian=] for all [=registry tables=] in a single [=registry=]
 			<em class=rfc2119>should</em> generally be the same entity.
 		<li>
-			Define whether entries may be deleted or changed after registration (generally, it is
-			recommended that such update not be allowed, except to mark entries as deprecated etc.)
+			Contain documentation on the policy and mechanisms for changes to existing entries:
+			<ul>
+				<li>can entries be retired (deleted) or deprecated?
+				<li>can entries be changed after being published?
+				<li>if entries can be deleted, can any code-points be re-used, or are they 'reserved' indefinitely?
+			</ul>
+		<li>
+			If the Registry is separately published, document its location (URL).
 	</ul>
 
 <h4 id=reg-contents>
@@ -4051,7 +4063,11 @@ Registry Reports</h4>
 			a definition of the format of that file.
 		<li>
 			Be purely informational, and contain no normative statements (no use of 'shall' or 'should').
+		<li>
+			Link back to the Registry Definition if it is separately published.
 	</ul>
+	
+	A [=registry report=] or [=registry section=] may contain sufficient information about the definition to make it independently readable.
 	
 	The [=Team=] <em class="rfc2119">must</em> make available
 	a means for interested parties to be notified of any updates to a [=registry table=].
@@ -4074,6 +4090,9 @@ Registry Referencing Specifications</h4>
 All rules and statements about implementations of Registries must be contained in the specifications or other documents that reference
 the registry, and are therefore subject to the processes (including approval and intellectual property provisions) applicable to those
 referencing specifications.
+
+It must not be possible that a change to the Registry values affect the conformance of implementations to the Referencing document; 
+if there are values that must be implemented, or any other such restrictions, they must be documented in the document without reference to the registry.
 
 <h4 id=reg-table-update>
 Updating Registry Tables</h4>
