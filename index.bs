@@ -2290,14 +2290,12 @@ W3C Technical Reports</h3>
 			[=Working Groups=] can also publish registries
 			in order to document collections of values or other data
 			that have no normative implementation requirements.
-			Registries are generally companion to [=Recommendation Track=] documents
-			which contain the related normative requirements,
-			and are typically published in a separate [=registry report=],
-			although they can also be directly embedded in [=Recommendation Track=] documents.
-			The registry track requires [=wide review=] and [=consensus=]
-			on what the registry will contain and how it will be managed,
-			but once set up,
-			changes to its entries are lightweight
+			A Registry is defined in a [=Recommendation Track=] document
+			which contains all related normative requirements. 
+			A Registry, is typically published in a separate [=W3C Registry=],
+			although it can also be directly embedded in a [=Recommendation Track=] document.
+			Once set up,
+			changes to Registry entries are lightweight
 			and can even be done without a [=Working Group=].
 			See [[#registries]] for details.
 	</dl>
@@ -3939,9 +3937,9 @@ Registries</h3>
 	of logically independent, consistently-structured <dfn lt="registry entry">registry entries</dfn>.
 	A registry has three associated components:
 	<ul>
-		<li>one or more [=registry tables=], holding the data set represented by the [=registry=]
-		<li>the [=rules of the registry=], defining how the [=registry tables=] are structured and maintained
-		<li>one or more referencing specifications, which make use of the [=registry=]
+		<li>the [=registry definition=], defining how the [=registry tables=] are structured and maintained;
+		<li>one or more [=registry tables=], holding the data set represented by the [=registry=];
+		<li>one or more referencing specifications, which make use of the [=registry=].
 	</ul>
 
 	The purposes of maintaining a [=registry=] can include:
@@ -3979,59 +3977,18 @@ Registries</h3>
 	facilitating the publication and maintenance of such [=registry tables=],
 	particularly those required by or closely related to [=W3C Recommendations=].
 
-<h4 id=reg-contents>
-Registry Reports</h4>
-
-	[=Registries=] can be published either as a stand-alone [=technical report=] called a <dfn>registry report</dfn>,
-	or incorporated as part of a [=W3C Recommendation=] as a <dfn>registry section</dfn>.
-	In either case, the [=technical report=] must:
-	<ul>
-		<li>
-			Clearly label the [=registry report=]/[=registry section|section=]
-			and its [=registry tables|tables=] as such,
-			including a link to this section of the Process.
-
-		<li>
-			Define the [=rules of the registry=] for each of its [=registry tables=].
-
-		<li>
-			Include the entire contents of each [=registry table=],
-			either inline in the report
-			(e.g. formatted as a table, or list, or other appropriate representation),
-			or in a machine-readable file published as part of the [=technical report=],
-			or (preferably) both.
-
-		<li>
-			Include, if the [=registry table=] is provided in a machine-readable file,
-			a definition of the format of that file.
-	</ul>
-
-	The [=Team=] <em class="rfc2119">must</em> make available
-	a means for interested parties to be notified of any updates to a [=registry table=].
-
-	Note: Since the Process does not impose requirements
-	on changes to the contents of a [=registry table=]
-	other than those imposed by the [=rules of the registry=],
-	acceptance of proposed [=registry changes=] on behalf of the [=custodian=] and
-	publication of an updated [=registry report=] that contains
-	only [=registry changes=] since the previous publication
-	can be automated
-	if satisfaction of those rules can be automatically verified.
-
-	A [=registry report=] or [=registry section=],
-	is purely documentational,
-	contains no requirements on implementers,
-	and is not subject to
-	the licensing commitments of the W3C Patent Policy.
-
 <h4 id=reg-rules>
-Rules of a Registry</h4>
+Registry Definition</h4>
 
-	The <dfn>rules of the registry</dfn>
-	define what each [=registry table=] is and how it is maintained.
-	They must:
+	A <dfn>registry definition</dfn>
+	defines what each [=registry table=] is and how it is maintained.
+	It must:
 
 	<ul>
+		<li>
+			Be published in a [= Recommendation =].
+		<li>
+			Be clearly isolated in its own section or document, and labeled as a Registry Definition.
 		<li>
 			Define the scope and purpose of the [=registry table=].
 
@@ -4058,15 +4015,71 @@ Rules of a Registry</h4>
 			The [=custodian=] may be the [=Working Group=], the [=Team=], or a delegated entity.
 			The [=custodian=] for all [=registry tables=] in a single [=registry=]
 			<em class=rfc2119>should</em> generally be the same entity.
-
+		<li>
+			Define whether entries may be deleted or changed after registration (generally, it is
+			recommended that such update not be allowed, except to mark entries as deprecated etc.)
 	</ul>
+
+<h4 id=reg-contents>
+Registry Reports</h4>
+
+	[=Registries=] can be published either as a stand-alone [=technical report=] called a <dfn>registry report</dfn>,
+	or incorporated as part of a [=W3C Recommendation=] as a <dfn>registry section</dfn>.
+	
+	A [=registry report=] or [=registry section=],
+	is purely documentational,
+	contains no requirements on implementations,
+	and is not subject to
+	the licensing commitments of the W3C Patent Policy.
+
+	The [=registry report=] or [=registry section=] must:
+	<ul>
+		<li>
+			Clearly label the [=registry report=]/[=registry section|section=]
+			and its [=registry tables|tables=] as such,
+			including a link to this section of the Process.
+
+		<li>
+			Include the entire contents of each [=registry table=],
+			either inline in the report
+			(e.g. formatted as a table, or list, or other appropriate representation),
+			or in a machine-readable file published as part of the [=technical report=],
+			or (preferably) both.
+
+		<li>
+			Include, if the [=registry table=] is provided in a machine-readable file,
+			a definition of the format of that file.
+		<li>
+			Be purely informational, and contain no normative statements (no use of 'shall' or 'should').
+	</ul>
+	
+	The [=Team=] <em class="rfc2119">must</em> make available
+	a means for interested parties to be notified of any updates to a [=registry table=].
+
+	Note: Since the Process does not impose requirements
+	on changes to the contents of a [=registry table=]
+	other than those imposed by the [=rules of the registry=],
+	acceptance of proposed [=registry changes=] on behalf of the [=custodian=] and
+	publication of an updated [=registry report=] that contains
+	only [=registry changes=] since the previous publication
+	can be automated
+	if satisfaction of those rules can be automatically verified.
+
+	The [=registry report=] or [=registry section=] is a <dfn>Draft Registry</dfn> until the [=registry definition=]
+	is a [=W3C Recommendation=], when it then becomes (and only then may be labeled, if separately published) a <dfn>W3C Registry</dfn>.
+	
+<h4 id=reg-ref-specifications>
+Registry Referencing Specifications</h4>
+
+All rules and statements about implementations of Registries must be contained in the specifications or other documents that reference
+the registry, and are therefore subject to the processes (including approval and intellectual property provisions) applicable to those
+referencing specifications.
 
 <h4 id=reg-table-update>
 Updating Registry Tables</h4>
 
-	As long as (and only if) they are in accordance with the [=rules of the registry=],
+	As long as (and only if) they are in accordance with the [=registry definition=],
 	changes to the contents of a [=registry table=]
-	(.e. [[#correction-classes|Class 5 changes]])
 	can be made by re-publishing the [=technical report=] that contains the affected table,
 	without needing to satisfy any other requirements for the publication
 	(not even Working Group consensus, unless this is required by the [=rules of the registry=]).
@@ -4077,204 +4090,6 @@ Updating Registry Tables</h4>
 	Such publications can be made
 	even in the absence of a [=Working Group=] chartered to maintain the registry
 	when the [=custodian=] is another entity.
-
-<h4 id=reg-maturity>
-Maturity Levels of Registry Reports</h4>
-
-<h5 id=draft-reg>
-Draft Registry</h5>
-
-	A <dfn>Draft Registry</dfn> is a document that is intended to become a [=W3C Registry=],
-	and that has been published for review by the community,
-	including W3C Members, the public,
-	and other technical organizations.
-	[=Draft Registries=] do not necessarily represent a consensus of the Working Group with respect to their content,
-	and do not imply any endorsement by W3C
-	or its members beyond agreement to work on a general area of technology.
-	Nevertheless the Working Group decided to adopt the [=Draft Registry=]
-	as the basis for their work at the time of publication.
-	A [=Draft Registry=] is suitable for gathering wide review prior to advancing to the next stage of maturity.
-
-	The [=Team=] <em class=rfc2119>must</em> announce
-	the publication of the first published [=Draft Registry=]
-	to other W3C groups and to the public.
-
-	[=Registry changes=]
-	can be made by simply re-publishing the [=Draft Registry=]
-	so long as they are in accordance with the [=rules of the registry=].
-	Additionally, any aspect of a [=Draft Registry=]
-	can be [[#revising-wd|revised]] in the same manner as a [=Working Draft=].
-
-	Any [=Draft Registry=] no longer intended to advance to [=W3C Registry=]
-	should be published as a [=Working Group Note=].
-
-	Possible next steps for a [=Draft Registry=]:
-
-	<ul>
-		<li>Revised [=Draft Registry=]
-		<li>[=Proposed Registry=]
-		<li>[=Working Group Note=]
-	</ul>
-
-
-<h5 id=proposed-reg>
-Proposed Registry</h5>
-
-	A <dfn>Proposed Registry</dfn> is a document
-	that satisfies the technical requirements
-	of the Working Group that produced it
-	and their dependencies.
-
-	W3C publishes a [=Proposed Registry=] to trigger formal review by the [=Advisory Committee=],
-	who <em class=rfc2119>may</em> recommend
-	that the document be published as a [=W3C Registry=],
-	returned to the Working Group for further work,
-	or abandoned.
-
-	Substantive changes <em class=rfc2119>must not</em> be made to a [=Proposed Registry=]
-	except by publishing a new [=Draft Registry=],
-	or by publishing a new [=Proposed Registry=]
-	and calling for a new [=Advisory Committee Review=].
-	However, changes to the contents of a [=registry table=]
-	(i.e. [[#correction-classes|Class 5 changes]])
-	can be made by re-publishing the [=Proposed Registry=]
-	if they are in accordance with the [=rules of the registry=].
-	These changes do not trigger a new [=Advisory Committee Review=]
-	(since they would be allowed without review in the final [=W3C Registry=] anyway).
-
-	To publish a [=Proposed Registry=],
-	in addition to meeting the <a href="#transition-reqs">general requirements for advancement</a>,
-	a [=Working Group=]:
-
-	<ul>
-		<li>
-			<em class="rfc2119">must</em> show that the [=registry report=]
-			has met all [=Working Group=] requirements,
-			or explain why the requirements have changed or been deferred,
-
-		<li>
-			<em class="rfc2119">must</em> document changes to dependencies
-			during the development of the [=registry report=],
-
-		<li>
-			<em class="rfc2119">must</em> show that the [=registry report=]
-			has received [=wide review=], and
-
-		<li>
-			<em class="rfc2119">must</em> show that all issues
-			raised during the [=Draft Registry=] review period
-			have been [=formally addressed=],
-
-		<li>
-			<em class="rfc2119">must</em> specify in the status section
-			the deadline for [=Advisory Committee review=],
-			which <em class="rfc2119">must</em> be <strong>at least</strong> 28 days
-			after the publication of the [=Proposed Registry=].
-	</ul>
-
-	The [=Team=]
-	<em class="rfc2119">must</em> announce the publication of a [=Proposed Registry=]
-	to the <a href="#AC">Advisory Committee</a>,
-	and <em class="rfc2119">must</em> begin an [=Advisory Committee Review=]
-	on the question of whether the [=registry report=]
-	is appropriate to [=publish=] as a [=W3C Registry=].
-
-	Since a [=W3C Registry=] <em class="rfc2119">must not</em> include any [=substantive changes=]
-	from the [=Proposed Registry=] it is based on,
-	to make any [=substantive change=] to a [=Proposed Registry=]
-	the [=Working Group=] <em class="rfc2119">must</em> publish a revised [=Proposed Registry=]
-	or return to [=Draft Registry=].
-
-	Note: Advancing to [=Proposed Registry=] indicates
-	that no further improvement is expected,
-	other than [[#correction-classes|changes to the contents of registry tables]].
-	A [=Proposed Registry=] is expected to be as well-written,
-	detailed,
-	self-consistent,
-	and technically complete
-	as a [=W3C Registry=],
-	and acceptable as such as soon as the AC completes its review.
-	Announcement of a different next step should include the reasons
-	why the change in expectations comes at so late a stage.
-
-	Possible next steps for a [=Proposed Registry=]:
-
-	<ul>
-		<li>Return to [=Draft Registry=]
-		<li>Revised [=Proposed Registry=]
-		<li>[=W3C Registry=]
-		<li>[=Working Group Note=]
-	</ul>
-
-<h5 id=rec-reg>
-W3C Registry</h5>
-
-	A <dfn>W3C Registry</dfn> is a [=registry report=] that,
-	after extensive [=consensus=]-building,
-	has received the endorsement of the W3C.
-	W3C recommends the wide use
-	of its Registries in support of standards for the Web.
-
-	The decision to advance a document to [=W3C Registry=]
-	is a [=W3C Decision=].
-
-	In addition to meeting the <a href="#transition-reqs">general requirements for advancement</a>,
-
-	<ul>
-		<li>
-			A [=W3C Registry=] <em class="rfc2119">must</em> identify where errata are tracked, and
-
-		<li>
-			A [=W3C Registry=] <em class="rfc2119">must not</em> include any [=substantive changes=]
-			from the [=Proposed Registry=]
-			on which it is based.
-
-		<li>
-			If there was any [=dissent=] in Advisory Committee reviews,
-			the [=Director=] <em class="rfc2119">must</em> publish the substantive content of the dissent
-			to W3C and the general public,
-			and <em class="rfc2119">must</em> [=formally address=] the comment
-			at least 14 days before publication as a [=W3C Registry=].
-
-		<li>
-			[=Advisory Committee representatives=] <em class="rfc2119">may</em> initiate
-			an [=Advisory Committee Appeal=]
-			of the [=W3C decision=]
-
-		<li>
-			The [=Team=] <em class="rfc2119">must</em> announce the publication of a [=W3C Registry=]
-			to <a href="#AC">Advisory Committee</a>,
-			other W3C groups
-			and to the public.
-	</ul>
-
-	Changes to the contents of a [=registry table=]
-	(i.e. [[#correction-classes|Class 5 changes]])
-	can be made by re-publishing the [=W3C Registry=]
-	if they are in accordance with the [=rules of the registry=].
-	Such publications can be made even in the absence
-	of a [=Working Group=] chartered to maintain the [=W3C Registry=]
-	when the [=custodian=] is another entity.
-
-	The [=Working Group=]
-	(or the [=Team=], if no [=Working Group=] is chartered to maintain the [=W3C Registry=])
-	may re-publish an updated [=W3C Registry=]
-	to make [=editorial changes=]
-	(i.e. [[#correction-classes|Class 1 or Class 2 changes]])
-	to a [=W3C Registry=].
-
-	In order to make [=substantive changes=] to a [=W3C Registry=]
-	(i.e. changes to the [=rules of the registry=]),
-	the [=Working Group=] must publish a revised [=Proposed Registry=]
-	or return it to [=Draft Registry=].
-
-	Possible next steps for a [=W3C Registry=]:
-
-	<ul>
-		<li>Return to [=Draft Registry=]
-		<li>Return to [=Proposed Registry=]
-		<li>[=Working Group Note=]
-	</ul>
 
 <h3 id="further-reading">
 Further reading</h3>
