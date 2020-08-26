@@ -3976,24 +3976,26 @@ Registries</h3>
 	facilitating the publication and maintenance of such [=registry tables=],
 	particularly those required by or closely related to [=W3C Recommendations=].
 	
-	Note that not every table in a specification is a potential registry. 
-	If the intent or effect is that the table enumerates all the possibilities 
-	the authors of the specification expect or envisage, then the table by itself is enough. 
-	Similarly if the table is managed by the working group and only updated as part of specification update, 
-	then the complexities of 3rd-party registration applications and rules are not needed.
+	<div class=note>
+		Note: not every table in a specification is a potential registry. 
+		If the intent or effect is that the table enumerates all the possibilities 
+		the authors of the specification expect or envisage, then the table by itself is enough. 
+		Similarly if the table is managed by the working group and only updated as part of specification update, 
+		then the complexities of 3rd-party registration applications and rules are not needed.
+	</div>
 
 <h4 id=reg-rules>
 Registry Definition</h4>
 
-	A <dfn>registry definition</dfn>
+	A <dfn>Registry Definition</dfn>
 	defines what each [=registry table=] is and how it is maintained.
-	It must:
+	It <em class=rfc2119>must</em>:
 
 	<ul>
 		<li>
-			Be published in a [= Recommendation =].
+			Be published in a [=Recommendation=].
 		<li>
-			Be clearly isolated in its own section or document, and labeled as a Registry Definition.
+			Be clearly isolated in its own section or document, and labeled as a [=Registry Definition=].
 		<li>
 			Define the scope and purpose of each [=registry table=].
 
@@ -4035,7 +4037,7 @@ Registry Definition</h4>
 Registry Reports</h4>
 
 	[=Registries=] can be published either as a stand-alone [=technical report=] called a <dfn>registry report</dfn>,
-	or incorporated as part of a [=W3C Recommendation=] as a <dfn>registry section</dfn>.
+	or incorporated as part of a [=Recommendation=] as a <dfn>registry section</dfn>.
 	
 	A [=registry report=] or [=registry section=],
 	is purely documentational,
@@ -4043,7 +4045,7 @@ Registry Reports</h4>
 	and is not subject to
 	the licensing commitments of the W3C Patent Policy.
 
-	The [=registry report=] or [=registry section=] must:
+	The [=registry report=] or [=registry section=] <em class=rfc2119>must</em>:
 	<ul>
 		<li>
 			Clearly label the [=registry report=]/[=registry section|section=]
@@ -4063,51 +4065,53 @@ Registry Reports</h4>
 		<li>
 			Be purely informational, and contain no normative statements (no use of 'shall' or 'should').
 		<li>
-			Link back to the Registry Definition if it is separately published.
+			Link back to the Registry Definition if that is separately published.
 	</ul>
 	
-	A [=registry report=] or [=registry section=] may contain sufficient information about the definition to make it independently readable.
+	A [=registry report=] or [=registry section=] may contain sufficient information about the definition of the registry,
+	such that it is independently readable.
 	
 	The [=Team=] <em class="rfc2119">must</em> make available
 	a means for interested parties to be notified of any updates to a [=registry table=].
 
-	Note: Since the Process does not impose requirements
-	on changes to the contents of a [=registry table=]
-	other than those imposed by the [=rules of the registry=],
-	acceptance of proposed [=registry changes=] on behalf of the [=custodian=] and
-	publication of an updated [=registry report=] that contains
-	only [=registry changes=] since the previous publication
-	can be automated
-	if satisfaction of those rules can be automatically verified.
+	<div class=note>
+		Note: Since the Process does not impose requirements
+		on changes to the contents of a [=registry table=]
+		other than those imposed by the [=rules of the registry=],
+		acceptance of proposed [=registry changes=] on behalf of the [=custodian=] and
+		publication of an updated [=registry report=] that contains
+		only [=registry changes=] since the previous publication
+		can be automated
+		if satisfaction of those rules can be automatically verified.
+	</div>
 
 	The [=registry report=] or [=registry section=] is a <dfn>Draft Registry</dfn> until the [=registry definition=]
-	is a [=W3C Recommendation=], when it then becomes (and only then may be labeled, if separately published) a <dfn>W3C Registry</dfn>.
+	is a [=Recommendation=], when it then becomes (and only then may be labeled, if separately published) a <dfn>W3C Registry</dfn>.
 	
 <h4 id=reg-ref-specifications>
 Registry Referencing Specifications</h4>
 
-	All rules and statements about implementations of Registries must be contained in the specifications or other documents that reference
-	the registry, and are therefore subject to the processes (including approval and intellectual property provisions) applicable to those
-	referencing specifications.
+	All rules and statements about implementations of Registries <em class=rfc2119>must</em> be contained 
+	in the specifications or other documents that reference the registry, 
+	and are therefore subject to the processes (including approval and intellectual property provisions) applicable to those referencing specifications.
 
-	It must not be possible that a change to the Registry values affect the conformance of implementations to the Referencing document; 
-	if there are values that must be implemented, or any other such restrictions, they must be documented in the document without reference to the registry.
+	It <em class=rfc2119>must not</em> be possible that a change to the Registry values affect the conformance of implementations to the Referencing document; 
+	if there are values that must be implemented, or any other such restrictions, they <em class=rfc2119>must</em> be documented in the document without reference to the registry.
 
 	For example, "All implementations must implement the Basic-Method as defined in the Registry" is not acceptable; 
 	a change to the definition of the Basic-Method in the Registry would then affect conformance. Instead, the requirement must be complete in the
-	specification, for example "All implementations must recognize the name Basic-Method, and implement it as defined by IETF RFC xxxx".
+	specification, for example "All implementations must recognize the name Basic-Method, and implement it as defined by section yy of IETF RFC xxxx".
 	(The Registry should nonetheless contain Basic-Method as an entry.)
 
 <h4 id=reg-table-update>
 Updating Registry Tables</h4>
 
-	As long as (and only if) they are in accordance with the [=registry definition=],
-	changes to the contents of a [=registry table=]
+	Changes to the contents of a [=registry table=] that are in accordance with the [=registry definition=]
 	can be made by re-publishing the [=technical report=] that contains the affected table,
 	without needing to satisfy any other requirements for the publication
 	(not even Working Group consensus, unless this is required by the [=rules of the registry=]).
 	Such [=registry changes=] do not trigger new [=Advisory Committee Reviews=],
-	nor new Exclusion Opportunities,
+	nor Exclusion Opportunities,
 	and do not require Director's approval,
 	even for [=technical reports=] at maturities where this would normally be expected.
 	Such publications can be made
