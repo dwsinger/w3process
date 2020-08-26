@@ -2294,8 +2294,7 @@ W3C Technical Reports</h3>
 			which contains all related normative requirements. 
 			A Registry, is typically published in a separate [=W3C Registry=],
 			although it can also be directly embedded in a [=Recommendation Track=] document.
-			Once set up,
-			changes to Registry entries are lightweight
+			Once set up, changes to Registry entries are lightweight
 			and can even be done without a [=Working Group=].
 			See [[#registries]] for details.
 	</dl>
