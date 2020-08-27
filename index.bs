@@ -3998,14 +3998,12 @@ Registry Definition</h4>
 			Be clearly isolated in its own section or document, and labeled as a [=Registry Definition=].
 		<li>
 			Define the scope and purpose of each [=registry table=].
-
 		<li>
 			Define the fields of each [=registry table=]
 			and their constraints
 			(e.g. values must be drawn from a defined set, or be unique,
 			or only reference publicly available resources,
 			etc.)
-
 		<li>
 			Define the method and critera by which changes are proposed, approved, and incorporated.
 			(For example, a [=registry=] could define
