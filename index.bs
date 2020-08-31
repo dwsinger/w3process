@@ -4015,7 +4015,7 @@ Registry Definition</h4>
 			Identify the <dfn>custodian</dfn> of the [=registry table=]:
 			the entity to which requests for [=registry changes=] must be sent,
 			and which is responsible for evaluating whether such requests
-			satisfy the criteria defined in the [=rules of the registry=].
+			satisfy the criteria defined in the [=Registry Definition=].
 
 			The [=custodian=] may be the [=Working Group=], the [=Team=], or a delegated entity.
 			The [=custodian=] for all [=registry tables=] in a single [=registry=]
@@ -4075,7 +4075,7 @@ Registry Reports</h4>
 	<div class=note>
 		Note: Since the Process does not impose requirements
 		on changes to the contents of a [=registry table=]
-		other than those imposed by the [=rules of the registry=],
+		other than those imposed by the [=Registry Definition=],
 		acceptance of proposed [=registry changes=] on behalf of the [=custodian=] and
 		publication of an updated [=registry report=] that contains
 		only [=registry changes=] since the previous publication
@@ -4107,7 +4107,7 @@ Updating Registry Tables</h4>
 	Changes to the contents of a [=registry table=] that are in accordance with the [=registry definition=]
 	can be made by re-publishing the [=technical report=] that contains the affected table,
 	without needing to satisfy any other requirements for the publication
-	(not even Working Group consensus, unless this is required by the [=rules of the registry=]).
+	(not even Working Group consensus, unless this is required by the [=Registry Definition=]).
 	Such [=registry changes=] do not trigger new [=Advisory Committee Reviews=],
 	nor Exclusion Opportunities,
 	and do not require Director's approval,
