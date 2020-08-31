@@ -2292,7 +2292,7 @@ W3C Technical Reports</h3>
 			that have no normative implementation requirements.
 			A Registry is defined in a [=Recommendation Track=] document
 			which contains all related normative requirements. 
-			A Registry, is typically published in a separate [=W3C Registry=],
+			A Registry is typically published in a separate [=W3C Registry=],
 			although it can also be directly embedded in a [=Recommendation Track=] document.
 			Once set up, changes to Registry entries are lightweight
 			and can even be done without a [=Working Group=].
@@ -4063,7 +4063,7 @@ Registry Reports</h4>
 		<li>
 			Be purely informational, and contain no normative statements (no use of 'shall' or 'should').
 		<li>
-			Link back to the Registry Definition if that is separately published.
+			Link back to the [=Registry Definition=] if that is separately published.
 	</ul>
 	
 	A [=registry report=] or [=registry section=] may contain sufficient information about the definition of the registry,
